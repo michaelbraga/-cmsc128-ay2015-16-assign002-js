@@ -59,7 +59,20 @@ var Library = {
 		on the letters of alphabet.
 	*/
 	isValidString: function(string, alphabet) {
-
+		if(!string){
+			console.log(string + " is not a valid string!");
+			return null;
+		}
+		if (!alphabet) {
+			console.log(alphabet + " is not a valid string!");
+			return null;
+		}
+		for (var i = 0; i < string.length; i++) {
+			if(!(alphabet.indexOf(string[i]) > -1)){
+				return false;
+			}
+		}
+		return true;
 	},
 
 	/*
