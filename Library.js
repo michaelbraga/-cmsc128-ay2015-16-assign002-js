@@ -82,7 +82,23 @@ var Library = {
 		we typically associate with string implementations.
 	*/
 	getSkew: function(genomeString, n) {
+		if(!genomeString || genomeString.length <= 0){
+			console.log(genomeString + " is not a valid string!");
+			return null;
+		}
 
+		var numG = 0, numC = 0;
+		for (var i = 0; i < n; i++) {
+			switch (genomeString[i]) {
+				case 'G':
+					numG += 1;
+					break;
+				case 'C':
+					numC += 1;
+					break;
+			}
+		}
+		return (numG - numC);
 	},
 
 	/*
