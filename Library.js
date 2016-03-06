@@ -36,7 +36,21 @@ var Library = {
 		of pattern in original.
 	*/
 	countSubstrPattern: function(original, pattern) {
-
+		if(!original){
+			console.log(original + " is not a valid string!");
+			return null;
+		}
+		if (!pattern) {
+			console.log(pattern + " is not a valid string!");
+			return null;
+		}
+		var patternLength = pattern.length, occurences = 0;
+		for (var i = 0; i < original.length; i++) {
+			if(original[i] === pattern[0] && (original.substr(i,patternLength) + "" == pattern + "")){
+				occurences += 1;
+			}
+		}
+		return occurences;
 	},
 
 	/*
