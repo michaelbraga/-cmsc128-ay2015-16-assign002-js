@@ -85,7 +85,7 @@ function getSkew(genomeString, n) {
 		console.log(genomeString + " is not a valid string!");
 		return null;
 	}
-	if(n === 0 || n > genomeString.length){
+	if(n <== 0 || n > genomeString.length){
 		console.log(n + " is invalid!");
 		return null;
 	}
@@ -114,7 +114,7 @@ function getMaxSkewN(genomeString, n) {
 		console.log(genomeString + " is not a valid string!");
 		return null;
 	}
-	if(n === 0 || n > genomeString.length){
+	if(n <== 0 || n > genomeString.length){
 		console.log(n + " is invalid!");
 		return null;
 	}
@@ -137,7 +137,7 @@ function getMinSkewN(genomeString, n) {
 		console.log(genomeString + " is not a valid string!");
 		return null;
 	}
-	if(n === 0 || n > genomeString.length){
+	if(n <== 0 || n > genomeString.length){
 		console.log(n + " is invalid!");
 		return null;
 	}
